@@ -3,20 +3,26 @@
 // 4  -> 24
 // 5  -> 120
 
-namespace HelloWorld 
+namespace GB.CSharp.Seminar4
 { 
-    class Program 
+    class task1 
     { 
         public static void Main(string[] args) 
         { 
             Console.WriteLine("Введите число N и мы найдем произведение от 1 до N!");
             int N = Convert.ToInt32(Console.ReadLine());
+            int res = GetProduct(N);
+            Console.WriteLine(res);
+        } 
+
+        public static int GetProduct(int n)
+        {
             int result = 1;
-            for (int i = 1; i <= N; i++)
+            for (int i = 1; i <= n; i++)
             {
                 result = result * i;
             }
-            Console.WriteLine(result);
-        } 
+            return result;
+        }
     } 
 }
